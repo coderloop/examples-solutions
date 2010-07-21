@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="helloworld" basedir="." default="default">
+<property name="build" location=".build" />
+<property name="srcfolder" value="src" />
+<property name="code.classes" location="${build}/classes" />
+<property name="code.sources" location="${srcfolder}" />
+<dirset id="srcdir" dir="." includes="src" />
+<path id="lib.path"><pathelement path="${code.classes}" /></path>
+<target name="compile">
+	<mkdir dir="${code.classes}" />
+	<javac srcdir="${code.sources}" destdir="${code.classes}" classpathref="lib.path" target="1.5" encoding="utf-8" />
+</target>
+<target name="default" >
+	<antcall target="compile" />
+</target>
+</project>

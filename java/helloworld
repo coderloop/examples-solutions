@@ -1,0 +1,4 @@
+#!/bin/bash
+MAINCLASS="pack.HelloWorld"
+CP=".build/classes"
+java -cp "${CP}" ${MAINCLASS} "$*"
